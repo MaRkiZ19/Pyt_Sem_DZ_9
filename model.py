@@ -38,5 +38,22 @@ def search(word: str) -> dict[int:dict[str,str]]:
             result[index] = contact
     return result
 
-
+def change(menu_smal, index):
+    ch_cnt = phone_book.get(index)
+    while True:
+        select = menu_smal
+        match select:
+            case 1:
+                ch_cnt['name'] = input('Введлите новое имя: ')
+                print(f'\n Контакт успешно изменен')
+            case 2:
+                ch_cnt['phone'] = input('Введлите новый номер: ')
+                print(f'\n Контакт успешно изменен')
+            case 3:
+                ch_cnt['coment'] = input('Введлите новвый комментарий: ')
+                print(f'\n Контакт успешно изменен')
+            case 4:
+                break
+    print(f'\n Спасибо, приходите еще')
+    print('='*200 +'\n')
         

@@ -46,3 +46,14 @@ def add_contact():
 
 def search_word() -> str:
     return input(text.search_word)
+
+def menu_smal() -> int:
+    print(text.menu_smal)
+    while True:
+        select = input(text.select_menu)
+        if select.isdigit() and 0<int(select)<5:
+            return int(select)
+        print_message(text.input_error_smal)
+
+def index_chnge():
+    return int(input(text.index_chnge))

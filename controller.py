@@ -28,7 +28,13 @@ def start():
                 result = model.search(word)
                 view.show_contacts(result, text.empty_search(word))
             case 6:
-                pass
+                word = view.search_word()
+                result = model.search(word)
+                view.show_contacts(result, text.empty_search(word))
+                index_chnge = view.index_chnge()
+                menu_smal=view.menu_smal()
+                model.change(menu_smal, index_chnge)
+
             case 7:
                 pass
             case 8:
